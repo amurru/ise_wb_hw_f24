@@ -325,3 +325,51 @@ footer a:hover {
 .dark-mode .text-info {
   color: #17a2b8 !important;
 }
+
+/* Modal in Dark Mode */
+.dark-mode .modal-content {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border: 1px solid #333;
+}
+
+.dark-mode .modal-header {
+  border-bottom: 1px solid #333;
+}
+
+.dark-mode .modal-footer {
+  border-top: 1px solid #333;
+}
+
+.dark-mode .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #ffffff;
+}
+
+.dark-mode .btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+  color: #ffffff;
+}
+
+.dark-mode .form-select {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #555;
+}
+
+.dark-mode .form-select:focus {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.dark-mode .form-control::placeholder {
+  color: #cccccc;
+}
+
+.dark-mode .form-select {
+  color: #ffffff;
+}

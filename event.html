@@ -147,6 +147,7 @@ Ahmad Helal (ahmad_114613)
                 <div class="d-grid gap-2">
                   <button class="btn btn-success">أضف إلى التقويم</button>
                   <button class="btn btn-info text-white">شارك الفعالية</button>
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">احجز مكانك</button>
                 </div>
               </div>
             </div>
@@ -207,6 +208,58 @@ Ahmad Helal (ahmad_114613)
         </div>
       </div>
     </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white flex-row">
+            <h5 class="modal-title" id="bookingModalLabel">حجز مكان في الفعالية</h5>
+            <button type="button" class="btn-close btn-close-white me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted mb-4">يرجى ملء التفاصيل التالية لحجز مكانك في ورشة عمل التصوير الفوتوغرافي. سنتواصل معك قريباً لتأكيد الحجز.</p>
+            <form id="bookingForm">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="guestName" class="form-label fw-bold">الاسم الكامل</label>
+                  <input type="text" class="form-control" id="guestName" placeholder="أدخل اسمك الكامل" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="guestEmail" class="form-label fw-bold">البريد الإلكتروني</label>
+                  <input type="email" class="form-control" id="guestEmail" placeholder="example@email.com" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="guestPhone" class="form-label fw-bold">رقم الهاتف</label>
+                  <input type="tel" class="form-control" id="guestPhone" placeholder="+963xxxxxxxxx" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="numGuests" class="form-label fw-bold">عدد الحضور</label>
+                  <select class="form-select" id="numGuests" required>
+                    <option value="" disabled selected>اختر العدد</option>
+                    <option value="1">1 شخص</option>
+                    <option value="2">2 أشخاص</option>
+                    <option value="3">3 أشخاص</option>
+                    <option value="4">4 أشخاص</option>
+                    <option value="5">5 أشخاص أو أكثر</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="guestMessage" class="form-label fw-bold">رسالة إضافية (اختياري)</label>
+                <textarea class="form-control" id="guestMessage" rows="3" placeholder="أي ملاحظات أو طلبات خاصة..."></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">إلغاء</button>
+            <button type="submit" form="bookingForm" class="btn btn-primary px-4">تأكيد الحجز</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" class="btn btn-primary scroll-to-top" aria-label="Scroll to top">↑</button>
