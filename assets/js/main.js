@@ -37,24 +37,98 @@ document.addEventListener("DOMContentLoaded", function() {
   // This logic only runs if the filter button exists on the events page.
   const filterBtn = document.getElementById("filterBtn");
   if (filterBtn) {
-    filterBtn.addEventListener("click", function() {
-      const categoryFilter = document
-        .getElementById("categoryFilter")
-        .value.toLowerCase();
+    // Function to apply filters
+    function applyFilters() {
+      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+      const categoryFilter = document.getElementById("categoryFilter").value.toLowerCase();
+      const dateFilter = document.getElementById("dateFilter").value;
       const allEvents = document.querySelectorAll(".event-item");
 
       allEvents.forEach(function(event) {
         const eventCategory = event.getAttribute("data-category").toLowerCase();
-
-        // Show or hide events based on the selected category.
-        // If "all" is selected, or if the event's category matches the filter, show it.
-        if (categoryFilter === "all" || eventCategory === categoryFilter) {
-          event.style.display = "block"; // Show the event card
-        } else {
-          event.style.display = "none"; // Hide the event card
+        const eventTitle = event.querySelector(".card-title").textContent.toLowerCase();
+        const eventDesc = event.querySelector(".card-text:not(.text-muted)").textContent.toLowerCase();
+        const eventDateText = event.querySelector(".text-muted").textContent;
+        const eventDate = eventDateText.match(/التاريخ:\s*(\d+)\s+(\w+)\s+(\w+)\s+(\d+)/);
+        let eventDateISO = "";
+        if (eventDate) {
+          const day = eventDate[1];
+          const monthPart1 = eventDate[2];
+          const monthPart2 = eventDate[3];
+          const year = eventDate[4];
+          let month = "01";
+          if (monthPart1 === "تشرين") {
+            month = monthPart2 === "الأول" ? "10" : "11";
+          } else {
+            const monthMap = {
+              "كانون": monthPart2 === "الأول" ? "12" : "01", // Assuming كانون الأول is Dec, كانون الثاني Jan
+              "شباط": "02", "آذار": "03", "نيسان": "04", "أيار": "05", "حزيران": "06",
+              "تموز": "07", "آب": "08", "أيلول": "09"
+            };
+            month = monthMap[monthPart1] || "01";
+          }
+          eventDateISO = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
         }
+
+        let show = true;
+
+        // Category filter
+        if (categoryFilter !== "all" && eventCategory !== categoryFilter) {
+          show = false;
+        }
+
+        // Search filter
+        if (searchTerm && !eventTitle.includes(searchTerm) && !eventDesc.includes(searchTerm)) {
+          show = false;
+        }
+
+        // Date filter
+        if (dateFilter && eventDateISO !== dateFilter) {
+          show = false;
+        }
+
+        event.style.display = show ? "block" : "none";
       });
+    }
+
+    // Restore filters from localStorage
+    const savedSearch = localStorage.getItem("eventSearch");
+    const savedCategory = localStorage.getItem("eventCategory");
+    const savedDate = localStorage.getItem("eventDate");
+    if (savedSearch) document.getElementById("searchInput").value = savedSearch;
+    if (savedCategory) document.getElementById("categoryFilter").value = savedCategory;
+    if (savedDate) document.getElementById("dateFilter").value = savedDate;
+
+    // Apply filters on load if any saved
+    if (savedSearch || savedCategory !== "all" || savedDate) {
+      applyFilters();
+    }
+
+    filterBtn.addEventListener("click", function() {
+      // Save to localStorage
+      const searchVal = document.getElementById("searchInput").value;
+      const categoryVal = document.getElementById("categoryFilter").value;
+      const dateVal = document.getElementById("dateFilter").value;
+      localStorage.setItem("eventSearch", searchVal);
+      localStorage.setItem("eventCategory", categoryVal);
+      localStorage.setItem("eventDate", dateVal);
+
+      applyFilters();
     });
+
+    // Clear filters button
+    const clearBtn = document.getElementById("clearBtn");
+    if (clearBtn) {
+      clearBtn.addEventListener("click", function() {
+        document.getElementById("searchInput").value = "";
+        document.getElementById("categoryFilter").value = "all";
+        document.getElementById("dateFilter").value = "";
+        localStorage.removeItem("eventSearch");
+        localStorage.removeItem("eventCategory");
+        localStorage.removeItem("eventDate");
+        applyFilters();
+      });
+    }
   }
 
   // --- Scroll to Top Button ---
