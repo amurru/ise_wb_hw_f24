@@ -1,0 +1,327 @@
+/*
+  Title: ISE WB HW - F24
+  File: styles.css
+  Description: This file contains the main styles for the City Events Guide website.
+  It includes general styling, typography, and component-specific customizations.
+*/
+
+/* --- General Styling & Typography --- */
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #f8f9fa;
+  /* Light grey background */
+}
+
+/* --- Section Title Styling --- */
+/* A consistent style for titles of different sections */
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #343a40;
+  /* Dark grey color for titles */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.dark-mode .section-title {
+  color: #ffffff;
+}
+
+/* A simple underline effect for section titles */
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+  /* Primary blue color */
+}
+
+/* --- Component Customizations --- */
+
+/* Navbar Styling */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-brand img {
+  margin-left: 10px;
+}
+
+/* Logo Responsive Styling */
+.logo-responsive {
+  max-height: 40px;
+  max-width: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Adjust logo size on smaller screens */
+@media (max-width: 768px) {
+  .logo-responsive {
+    max-height: 35px;
+    max-width: 100px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-responsive {
+    max-height: 35px;
+    max-width: 80px;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
+/* Event Card Styling */
+/* Adding a subtle hover effect to event cards for better UX */
+.event-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  /* Lift the card up slightly on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-card .card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Carousel Customization */
+.carousel-item img {
+  filter: brightness(0.8);
+  /* Darken image slightly to make text more readable */
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+/* Footer Styling */
+footer {
+  border-top: 3px solid #007bff;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 1000;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top.show {
+  display: block;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+  border-bottom: 1px solid #333;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .nav-link {
+  color: #ffffff !important;
+}
+
+.dark-mode .navbar-toggler {
+  border-color: #ffffff;
+}
+
+.dark-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.dark-mode .navbar-brand img {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode .card {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border: 1px solid #333;
+}
+
+.dark-mode .card .card-title,
+.dark-mode .card .card-text {
+  color: #ffffff;
+}
+
+.dark-mode .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
+}
+
+.dark-mode .btn-primary:hover {
+  color: #e0e0e0;
+}
+
+.dark-mode .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.dark-mode .btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.dark-mode .btn-outline-secondary {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.dark-mode .btn-outline-secondary:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode .section-title::after {
+  background-color: #007bff;
+}
+
+.dark-mode footer {
+  background-color: #1f1f1f;
+  border-top: 3px solid #007bff;
+}
+
+.dark-mode .text-muted {
+  color: #cccccc !important;
+}
+
+.dark-mode .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .alert {
+  background-color: #333;
+  color: #ffffff;
+  border-color: #555;
+}
+
+/* Form Elements in Dark Mode */
+.dark-mode .form-control {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #555;
+}
+
+.dark-mode .form-control:focus {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.dark-mode .form-label {
+  color: #ffffff;
+}
+
+.dark-mode .invalid-feedback {
+  color: #dc3545;
+}
+
+/* Links in Dark Mode */
+.dark-mode a {
+  color: #007bff;
+}
+
+.dark-mode a:hover {
+  color: #0056b3;
+}
+
+.dark-mode .text-dark {
+  color: #ffffff !important;
+}
+
+/* Accordion in Dark Mode */
+.dark-mode .accordion-button {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #555;
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark-mode .accordion-body {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+/* Additional text classes */
+.dark-mode .text-primary {
+  color: #007bff !important;
+}
+
+.dark-mode .text-success {
+  color: #28a745 !important;
+}
+
+.dark-mode .text-danger {
+  color: #dc3545 !important;
+}
+
+.dark-mode .text-warning {
+  color: #ffc107 !important;
+}
+
+.dark-mode .text-info {
+  color: #17a2b8 !important;
+}

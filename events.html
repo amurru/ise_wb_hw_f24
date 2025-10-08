@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <!-- 
+ISE WB HW - F24
+Ammar Zerouk (ammar_94038)
+Ali Haj Ali (ali_79392)
+Ahmad Helal (ahmad_114613)
+-->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كل الفعاليات - دليل فعاليات المدينة</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header & Navbar -->
+    <header class="shadow-sm">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.png" alt="دليل المدينة" class="img-fluid logo-responsive" />
+            دليل المدينة
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="events.html"
+                  >كل الفعاليات</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">عن الدليل</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">اتصل بنا</a>
+              </li>
+              <li class="nav-item">
+                <button id="darkModeToggle" class="btn btn-outline-secondary ms-2" title="Toggle Dark Mode">🌙</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+      <div class="text-center mb-5">
+        <h1>استكشف كل الفعاليات</h1>
+        <p class="lead">ابحث وفلتر لتجد الفعالية المثالية لك.</p>
+      </div>
+
+      <!-- Filter and Search Toolbar -->
+      <div class="card p-3 mb-4 shadow-sm">
+        <div class="row g-3 align-items-center">
+          <div class="col-md-5">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="ابحث عن فعالية..."
+              id="searchInput"
+            />
+          </div>
+          <div class="col-md-3">
+            <select class="form-select" id="categoryFilter">
+              <option selected value="all">كل التصنيفات</option>
+              <option value="ثقافة">ثقافة</option>
+              <option value="رياضة">رياضة</option>
+              <option value="موسيقى">موسيقى</option>
+              <option value="عائلي">عائلي</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <input type="date" class="form-control" id="dateFilter" />
+          </div>
+          <div class="col-md-1">
+            <button class="btn btn-primary w-100" id="filterBtn">فلتر</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Events List -->
+      <section id="events-list">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <!-- Event Card 1 -->
+          <div class="col event-item" data-category="ثقافة">
+            <div class="card h-100 shadow-sm event-card">
+              <img
+                src="https://placehold.co/400x250/fd7e14/white?text=ورشة+عمل"
+                class="card-img-top"
+                alt="صورة فعالية"
+              />
+              <div class="card-body">
+                <span class="badge bg-primary mb-2">ثقافة</span>
+                <h5 class="card-title">ورشة عمل التصوير الفوتوغرافي</h5>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >التاريخ: 20 تشرين الأول 2025 | المكان: مركز الفنون</small
+                  >
+                </p>
+                <p class="card-text">تعلم أساسيات التصوير مع مصورين محترفين.</p>
+                <a href="event.html" class="btn btn-primary">عرض التفاصيل</a>
+              </div>
+            </div>
+          </div>
+          <!-- Event Card 2 -->
+          <div class="col event-item" data-category="عائلي">
+            <div class="card h-100 shadow-sm event-card">
+              <img
+                src="https://placehold.co/400x250/20c997/white?text=مهرجان+الطعام"
+                class="card-img-top"
+                alt="صورة فعالية"
+              />
+              <div class="card-body">
+                <span class="badge bg-warning text-dark mb-2">عائلي</span>
+                <h5 class="card-title">مهرجان الطعام المحلي</h5>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >التاريخ: 25 تشرين الأول 2025 | المكان: حديقة المدينة</small
+                  >
+                </p>
+                <p class="card-text">تذوق أشهى المأكولات من مطابخ متنوعة.</p>
+                <a href="event.html" class="btn btn-primary">عرض التفاصيل</a>
+              </div>
+            </div>
+          </div>
+          <!-- Event Card 3 -->
+          <div class="col event-item" data-category="موسيقى">
+            <div class="card h-100 shadow-sm event-card">
+              <img
+                src="https://placehold.co/400x250/dc3545/white?text=حفل+موسيقي"
+                class="card-img-top"
+                alt="صورة فعالية"
+              />
+              <div class="card-body">
+                <span class="badge bg-danger mb-2">موسيقى</span>
+                <h5 class="card-title">أمسية موسيقية كلاسيكية</h5>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >التاريخ: 30 تشرين الأول 2025 | المكان: دار الأوبرا</small
+                  >
+                </p>
+                <p class="card-text">
+                  استمتع بأروع المقطوعات الكلاسيكية العالمية.
+                </p>
+                <a href="event.html" class="btn btn-primary">عرض التفاصيل</a>
+              </div>
+            </div>
+          </div>
+          <!-- Event Card 4 -->
+          <div class="col event-item" data-category="رياضة">
+            <div class="card h-100 shadow-sm event-card">
+              <img
+                src="https://placehold.co/400x250/17a2b8/white?text=سباق+دراجات"
+                class="card-img-top"
+                alt="صورة فعالية"
+              />
+              <div class="card-body">
+                <span class="badge bg-info mb-2">رياضة</span>
+                <h5 class="card-title">سباق الدراجات الجبلي</h5>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >التاريخ: 5 تشرين الثاني 2025 | المكان: مسار الغابة</small
+                  >
+                </p>
+                <p class="card-text">
+                  تحدى نفسك في سباق مثير عبر التضاريس الطبيعية.
+                </p>
+                <a href="event.html" class="btn btn-primary">عرض التفاصيل</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-4 mt-5">
+      <div class="container">
+        <p>جميع الحقوق محفوظة &copy; 2025 دليل فعاليات المدينة.</p>
+        <div>
+          <a href="#" class="text-white me-2">فيسبوك</a>
+          <a href="#" class="text-white me-2">تويتر</a>
+          <a href="#" class="text-white">انستغرام</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="btn btn-primary scroll-to-top" aria-label="Scroll to top">↑</button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
