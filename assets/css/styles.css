@@ -106,7 +106,14 @@ body {
 }
 
 /* Carousel Customization */
+.carousel {
+  max-height: 400px;
+  overflow: hidden;
+}
+
 .carousel-item img {
+  height: 400px;
+  object-fit: cover;
   filter: brightness(0.8);
   /* Darken image slightly to make text more readable */
 }
