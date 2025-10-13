@@ -3,7 +3,8 @@
 This is the solution code for the WB Assignment project for ISE F24 at SVU.
 
 ## Live Demo
-You can access the project on [https://gh.amurru.dev/ise_wb_hw_f24/](https://gh.amurru.dev/ise_wb_hw_f24/)
+
+You can access the project on [https://gh.amurru.dev/](https://gh.amurru.dev)
 
 ## Participants
 
