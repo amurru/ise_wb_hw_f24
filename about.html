@@ -1,180 +1,258 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-<!-- 
+  <!-- 
 ISE WB HW - F24
 Ammar Zerouk (ammar_94038)
 Ali Haj Ali (ali_79392)
 Ahmad Helal (ahmad_114613)
+Mariam Abu Haileh (mariam_88099)
 -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>عن الدليل - دليل فعاليات المدينة</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>عن الدليل - دليل فعاليات المدينة</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <!-- Header & Navbar -->
-  <header class="shadow-sm">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <body>
+    <!-- Header & Navbar -->
+    <header class="shadow-sm">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/img/logo.png"
+              alt="دليل المدينة"
+              class="img-fluid logo-responsive"
+            />
+            دليل المدينة
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.html">كل الفعاليات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about.html"
+                  >عن الدليل</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">اتصل بنا</a>
+              </li>
+              <li class="nav-item">
+                <button
+                  id="darkModeToggle"
+                  class="btn btn-outline-secondary ms-2"
+                  title="Toggle Dark Mode"
+                >
+                  🌙
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+      <div class="text-center mb-5">
+        <img
+          src="assets/img/logo.png"
+          alt="دليل المدينة"
+          class="img-fluid mb-3"
+          style="max-height: 80px"
+        />
+        <h1>عن دليل فعاليات المدينة</h1>
+        <p class="lead">تعرف على قصتنا، رؤيتنا، وفريق العمل خلف هذه المنصة.</p>
+      </div>
+
+      <!-- Vision and Mission -->
+      <section class="mb-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>هدفنا ورؤيتنا</h3>
+            <p>
+              نسعى في "دليل فعاليات المدينة" إلى أن نكون المنصة الرائدة التي
+              تربط سكان المدينة وزوارها بأفضل الأنشطة والفعاليات. رؤيتنا هي
+              إثراء الحياة الثقافية والاجتماعية في مجتمعنا من خلال تسهيل الوصول
+              إلى المعلومات حول كل ما يحدث في المدينة.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h3>رسالتنا</h3>
+            <p>
+              مهمتنا هي جمع وتنظيم وعرض معلومات الفعاليات بطريقة سهلة وجذابة،
+              مما يسمح للجميع باكتشاف اهتمامات جديدة، قضاء أوقات ممتعة، وخلق
+              ذكريات لا تُنسى. نحن نؤمن بقوة الفعاليات في بناء مجتمعات أقوى
+              وأكثر ترابطًا.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section class="mb-5">
+        <h2 class="section-title text-center">فريق العمل</h2>
+        <div class="row text-center">
+          <!-- Team Member 1 -->
+          <div class="col-md-3">
+            <img
+              src="https://placehold.co/150x150/777/fff?text=AZ"
+              class="rounded-circle mb-3"
+              alt="صورة عضو الفريق"
+            />
+            <h5>عمار زيروق</h5>
+            <p class="text-muted">ammar_94038</p>
+          </div>
+          <!-- Team Member 2 -->
+          <div class="col-md-3">
+            <img
+              src="https://placehold.co/150x150/777/fff?text=AHA"
+              class="rounded-circle mb-3"
+              alt="صورة عضو الفريق"
+            />
+            <h5>علي الحاج علي</h5>
+            <p class="text-muted">ali_79392</p>
+          </div>
+          <!-- Team Member 3 -->
+          <div class="col-md-3">
+            <img
+              src="https://placehold.co/150x150/777/fff?text=AH"
+              class="rounded-circle mb-3"
+              alt="صورة عضو الفريق"
+            />
+            <h5>أحمد هلال</h5>
+            <p class="text-muted">ahmad_114613</p>
+          </div>
+          <!-- Team Member 4 -->
+          <div class="col-md-3">
+            <img
+              src="https://placehold.co/150x150/777/fff?text=MA"
+              class="rounded-circle mb-3"
+              alt="صورة عضو الفريق"
+            />
+            <h5>مريم أبو هايلة</h5>
+            <p class="text-muted">mariam_88099</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Policies -->
+      <section>
+        <h2 class="section-title text-center">سياسات النشر</h2>
+        <div class="accordion" id="accordionPolicies">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                كيفية تقديم فعالية
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionPolicies"
+            >
+              <div class="accordion-body">
+                لتقديم فعالية ليتم عرضها على منصتنا، يرجى التواصل معنا عبر صفحة
+                "اتصل بنا" مع توفير كافة التفاصيل اللازمة مثل اسم الفعالية،
+                التاريخ، المكان، ووصف موجز. سيقوم فريقنا بمراجعة الطلب والرد في
+                أقرب وقت ممكن.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                معايير النشر
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionPolicies"
+            >
+              <div class="accordion-body">
+                نحن نقبل الفعاليات التي تلتزم بمعايير مجتمعية إيجابية وتكون
+                مفتوحة للجمهور. يجب أن تكون المعلومات المقدمة دقيقة وكاملة.
+                نحتفظ بالحق في رفض نشر أي فعالية لا تتوافق مع سياساتنا أو
+                رؤيتنا.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-4 mt-5">
       <div class="container">
-         <a class="navbar-brand" href="index.html">
-           <img src="assets/img/logo.png" alt="دليل المدينة" class="img-fluid logo-responsive" />
-           دليل المدينة
-         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-           <ul class="navbar-nav ms-auto">
-             <li class="nav-item">
-               <a class="nav-link" href="index.html">الرئيسية</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="events.html">كل الفعاليات</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="about.html">عن الدليل</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="contact.html">اتصل بنا</a>
-             </li>
-             <li class="nav-item">
-               <button id="darkModeToggle" class="btn btn-outline-secondary ms-2" title="Toggle Dark Mode">🌙</button>
-             </li>
-           </ul>
+        <p>جميع الحقوق محفوظة &copy; 2025 دليل فعاليات المدينة.</p>
+        <div>
+          <a href="#" class="text-white me-2">فيسبوك</a>
+          <a href="#" class="text-white me-2">تويتر</a>
+          <a href="#" class="text-white">انستغرام</a>
         </div>
       </div>
-    </nav>
-  </header>
+    </footer>
 
-  <!-- Main Content -->
-  <main class="container my-5">
-    <div class="text-center mb-5">
-      <img src="assets/img/logo.png" alt="دليل المدينة" class="img-fluid mb-3" style="max-height: 80px" />
-      <h1>عن دليل فعاليات المدينة</h1>
-      <p class="lead">تعرف على قصتنا، رؤيتنا، وفريق العمل خلف هذه المنصة.</p>
-    </div>
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollToTopBtn"
+      class="btn btn-primary scroll-to-top"
+      aria-label="Scroll to top"
+    >
+      ↑
+    </button>
 
-    <!-- Vision and Mission -->
-    <section class="mb-5">
-      <div class="row">
-        <div class="col-md-6">
-          <h3>هدفنا ورؤيتنا</h3>
-          <p>
-            نسعى في "دليل فعاليات المدينة" إلى أن نكون المنصة الرائدة التي
-            تربط سكان المدينة وزوارها بأفضل الأنشطة والفعاليات. رؤيتنا هي
-            إثراء الحياة الثقافية والاجتماعية في مجتمعنا من خلال تسهيل الوصول
-            إلى المعلومات حول كل ما يحدث في المدينة.
-          </p>
-        </div>
-        <div class="col-md-6">
-          <h3>رسالتنا</h3>
-          <p>
-            مهمتنا هي جمع وتنظيم وعرض معلومات الفعاليات بطريقة سهلة وجذابة،
-            مما يسمح للجميع باكتشاف اهتمامات جديدة، قضاء أوقات ممتعة، وخلق
-            ذكريات لا تُنسى. نحن نؤمن بقوة الفعاليات في بناء مجتمعات أقوى
-            وأكثر ترابطًا.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team -->
-    <section class="mb-5">
-      <h2 class="section-title text-center">فريق العمل</h2>
-      <div class="row text-center">
-        <!-- Team Member 1 -->
-        <div class="col-md-4">
-          <img src="https://placehold.co/150x150/777/fff?text=AZ" class="rounded-circle mb-3" alt="صورة عضو الفريق" />
-          <h5>عمار زيروق</h5>
-          <p class="text-muted">ammar_94038</p>
-        </div>
-        <!-- Team Member 2 -->
-        <div class="col-md-4">
-          <img src="https://placehold.co/150x150/777/fff?text=AHA" class="rounded-circle mb-3" alt="صورة عضو الفريق" />
-          <h5>علي الحاج علي</h5>
-          <p class="text-muted">ali_79392</p>
-        </div>
-        <!-- Team Member 3 -->
-        <div class="col-md-4">
-          <img src="https://placehold.co/150x150/777/fff?text=AH" class="rounded-circle mb-3" alt="صورة عضو الفريق" />
-          <h5>أحمد هلال</h5>
-          <p class="text-muted">ahmad_114613</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Policies -->
-    <section>
-      <h2 class="section-title text-center">سياسات النشر</h2>
-      <div class="accordion" id="accordionPolicies">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-              aria-expanded="true" aria-controls="collapseOne">
-              كيفية تقديم فعالية
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-            data-bs-parent="#accordionPolicies">
-            <div class="accordion-body">
-              لتقديم فعالية ليتم عرضها على منصتنا، يرجى التواصل معنا عبر صفحة
-              "اتصل بنا" مع توفير كافة التفاصيل اللازمة مثل اسم الفعالية،
-              التاريخ، المكان، ووصف موجز. سيقوم فريقنا بمراجعة الطلب والرد في
-              أقرب وقت ممكن.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              معايير النشر
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-            data-bs-parent="#accordionPolicies">
-            <div class="accordion-body">
-              نحن نقبل الفعاليات التي تلتزم بمعايير مجتمعية إيجابية وتكون
-              مفتوحة للجمهور. يجب أن تكون المعلومات المقدمة دقيقة وكاملة.
-              نحتفظ بالحق في رفض نشر أي فعالية لا تتوافق مع سياساتنا أو
-              رؤيتنا.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center p-4 mt-5">
-    <div class="container">
-      <p>جميع الحقوق محفوظة &copy; 2025 دليل فعاليات المدينة.</p>
-      <div>
-        <a href="#" class="text-white me-2">فيسبوك</a>
-        <a href="#" class="text-white me-2">تويتر</a>
-        <a href="#" class="text-white">انستغرام</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTopBtn" class="btn btn-primary scroll-to-top" aria-label="Scroll to top">↑</button>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
-  <script src="assets/js/main.js"></script>
-</body>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
